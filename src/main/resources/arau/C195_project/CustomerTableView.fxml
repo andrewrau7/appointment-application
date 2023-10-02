@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="410.0" prefWidth="1068.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arau.C195_project.customer_controllers.CustomerTableController">
+   <children>
+      <TableView fx:id="customerTableView" layoutX="29.0" layoutY="87.0" prefHeight="258.0" prefWidth="1005.0">
+          <placeholder>
+              <Label text="No customers registered" />
+          </placeholder>
+        <columns>
+          <TableColumn fx:id="custIdCol" prefWidth="72.5" text="ID" />
+          <TableColumn fx:id="custNameCol" prefWidth="130.0" text="Name" />
+            <TableColumn fx:id="custPhoneCol" prefWidth="151.5" text="Phone" />
+            <TableColumn fx:id="custAddressCol" prefWidth="225.0" text="Address" />
+            <TableColumn fx:id="custStateCol" prefWidth="207.0" text="State/Province" />
+            <TableColumn fx:id="custCountryCol" prefWidth="83.5" text="Country" />
+            <TableColumn fx:id="custPostalCodeCol" prefWidth="134.5" text="Postal Code" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="160.0" layoutY="317.0" prefHeight="40.0" prefWidth="200.0" />
+      <Button layoutX="836.0" layoutY="365.0" mnemonicParsing="false" onAction="#onActionAddCustomer" text="Add" />
+      <Button layoutX="886.0" layoutY="365.0" mnemonicParsing="false" onAction="#onActionUpdateCustomer" text="Update" />
+      <Button layoutX="955.0" layoutY="365.0" mnemonicParsing="false" onAction="#onActionDeleteCustomer" text="Delete" />
+      <Label layoutX="65.0" layoutY="30.0" text="Customers">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Button layoutX="39.0" layoutY="365.0" mnemonicParsing="false" onAction="#onActionMainMenu" text="Back" />
+      <Label layoutX="291.0" layoutY="55.0" prefHeight="23.0" prefWidth="68.0" text="Filter By: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="allRadioButton" layoutX="376.0" layoutY="59.0" mnemonicParsing="false" onAction="#onActionShowAllCustomers" text="All">
+         <toggleGroup>
+            <ToggleGroup fx:id="customerTable" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="435.0" layoutY="59.0" mnemonicParsing="false" onAction="#onActionFireFilterComboBox" text="Customers with at least" toggleGroup="$customerTable" />
+      <Label layoutX="660.0" layoutY="60.0" text="appointment(s)" />
+      <ComboBox fx:id="numAppsComboBox" layoutX="595.0" layoutY="55.0" onAction="#onActionShowFilteredCustomers" prefHeight="26.0" prefWidth="57.0" />
+   </children>
+</AnchorPane>

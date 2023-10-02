@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arau.C195_project.menu_controllers.LoginController">
+   <children>
+      <TextField fx:id="userNameTextField" layoutX="103.0" layoutY="163.0" onAction="#usernameEnter" prefHeight="26.0" prefWidth="170.0" />
+      <Label fx:id="usernameLabel" layoutX="103.0" layoutY="146.0" text="Username" />
+      <Label fx:id="passwordLabel" layoutX="104.0" layoutY="209.0" text="Password" />
+      <Button fx:id="loginButton" layoutX="103.0" layoutY="286.0" mnemonicParsing="false" onAction="#OnActionLogin" prefHeight="26.0" prefWidth="170.0" text="Submit" />
+      <Label fx:id="zoneIdLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="100.0" prefHeight="17.0" prefWidth="376.0" underline="true" />
+      <Label fx:id="loginLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="39.0" prefHeight="44.0" prefWidth="376.0" text="Login" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Label fx:id="invalidLabel" alignment="CENTER" contentDisplay="CENTER" layoutY="259.0" prefHeight="17.0" prefWidth="376.0" textAlignment="CENTER" textFill="RED" />
+      <PasswordField fx:id="passwordTextField" layoutX="103.0" layoutY="226.0" onAction="#passwordEnter" prefHeight="26.0" prefWidth="170.0" />
+   </children>
+</AnchorPane>
